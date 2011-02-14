@@ -11,7 +11,7 @@ describe RubygemsController do
 
   describe "GET 'show'" do
     it "should find a gem if it exists" do
-      g = Factory.create :rubygem, name: 'gamname'
+      g = Factory.create :rubygem, name: 'gemname'
       get 'show', id: 'gemname'
       assigns(:gem).name.should == g.name
       assigns(:gem).id.should == g.id
